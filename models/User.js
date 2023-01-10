@@ -26,6 +26,7 @@ const userSchema = mongoose.Schema(
     email: {
       type: String,
       required: [true, 'email is required'],
+      unique: true,
       trim: true,
     },
     password: {
@@ -34,7 +35,8 @@ const userSchema = mongoose.Schema(
     },
     picture: {
       type: String,
-      default: 'Default picture',
+      default:
+        'https://res.cloudinary.com/dmhcnhtng/image/upload/v1643044376/avatars/default_pic_jeaybr.png',
       trim: true,
     },
     cover: {
@@ -136,8 +138,8 @@ const userSchema = mongoose.Schema(
     ],
   },
   {
-    timeStamps: true,
+    timestamps: true,
   }
 )
 
-model.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('User', userSchema)
