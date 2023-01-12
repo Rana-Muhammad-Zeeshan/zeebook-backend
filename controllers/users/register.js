@@ -1,15 +1,15 @@
 const bcrypt = require('bcrypt')
-const { sendVerificationEmail } = require('../helpers/mailer')
-const { generateToken } = require('../helpers/tokens')
+const { sendVerificationEmail } = require('../../helpers/mailer')
+const { generateToken } = require('../../helpers/tokens')
 
 const {
   validateEmail,
   validateLength,
   validateUsername,
-} = require('../helpers/validation')
-const User = require('../models/User')
+} = require('../../helpers/validation')
+const User = require('../../models/User')
 
-exports.register = async (req, res) => {
+const register = async (req, res) => {
   try {
     const {
       first_name,
@@ -99,3 +99,5 @@ exports.register = async (req, res) => {
     })
   }
 }
+
+module.exports = register
