@@ -17,9 +17,9 @@ const register = async (req, res) => {
       username,
       email,
       password,
-      byear,
-      bmonth,
-      bday,
+      bYear,
+      bMonth,
+      bDay,
       gender,
     } = req.body
 
@@ -67,9 +67,9 @@ const register = async (req, res) => {
       username: newUsername,
       email,
       password: cryptedPassword,
-      byear,
-      bmonth,
-      bday,
+      bYear,
+      bMonth,
+      bDay,
       gender,
     }).save()
 

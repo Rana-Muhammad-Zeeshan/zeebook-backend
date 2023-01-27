@@ -48,17 +48,17 @@ const userSchema = mongoose.Schema(
       required: [true, 'Gender is required'],
       trim: true,
     },
-    byear: {
+    bYear: {
       type: Number,
       required: true,
       trim: true,
     },
-    bmonth: {
+    bMonth: {
       type: Number,
       required: true,
       trim: true,
     },
-    bday: {
+    bDay: {
       type: Number,
       required: true,
       trim: true,
